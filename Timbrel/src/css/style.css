@@ -1,0 +1,6 @@
+body {
+    background-color: rgb(244, 240, 218);
+}
+* {
+    box-sizing: border-box; /* Final size after margin and padding */
+}
