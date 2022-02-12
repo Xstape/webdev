@@ -1,5 +1,5 @@
 # webdev
 New Era
-[Fast Layout](https://wireframe.cc/SFnUzy)
+Just made [Fast Layout](https://wireframe.cc/SFnUzy)
 
 Hmm...
