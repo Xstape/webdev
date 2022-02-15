@@ -1,3 +1,11 @@
+$main-color: #1eacc7
+$second-color: #ff5656
+	
+=btn_hover
+	&:hover
+		background-image: none
+		background-color: $main-color
+
 *
   font-family: 'Roboto', sans-serif
 
@@ -15,110 +23,112 @@ nav
   z-index: 3
 
 .menu
-  display: flex
-  justify-content: space-between
-  padding: 13px 70px
-  margin: 0
-  list-style-type: none
+	display: flex
+	justify-content: space-between
+	padding: 13px 70px
+	margin: 0
+	list-style-type: none
 
-  .menu_link
-    font-weight: 300
-    font-size: 15px
-    color: #FFFFFF
+	&_link
+		font-weight: 300
+		font-size: 15px
+		color: #FFFFFF
 
-  .menu_item
-    border-right: 2px dotted black
-    padding-right: 28px
+	&_item
+		border-right: 2px dotted black
+		padding-right: 28px
 
 .subheader
-  position: absolute
-  margin-top: 50px
-  width: 100%
-  height: 87px
-  background: rgba(0, 0, 0, 0.6)
+	position: absolute
+	margin-top: 50px
+	width: 100%
+	height: 87px
+	background: rgba(0, 0, 0, 0.6)
 
-  .subheader_logo
-    display: block
-    max-width: 100%
-    margin: 16px
+	&_logo
+		display: block
+		max-width: 100%
+		margin: 16px
 
-  .subheader_official
-    margin-top: 6px
-    font-weight: 300
-    font-size: 13px
-    color: #fff
-    opacity: 0.5
+	&_official
+		margin-top: 6px
+		font-weight: 300
+		font-size: 13px
+		color: #fff
+		opacity: 0.5
 
-  .subheader_call
-    margin-top: 19px
-    font-weight: 300
-    font-size: 12px
-    color: #fff
-    text-align: right
+	&_call
+		margin-top: 19px
+		font-weight: 300
+		font-size: 12px
+		color: #fff
+		text-align: right
 
-  .subheader_phone
-    display: block
-    font-size: 22px
-    color: #fff
-    text-align: right
+	&_phone
+		display: block
+		font-size: 22px
+		color: #fff
+		text-align: right
 
-  .subheader_btn
-    width: 172px
-    height: 46px
-    margin-top: 19px
-    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
-    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
-    border-radius: 4px
-    border: none
-    font-size: 14px
-    text-align: center
-    text-transform: uppercase
-    color: #FFFFFF
+	&_btn
+		width: 172px
+		height: 46px
+		margin-top: 19px
+		background: linear-gradient(0deg, $main-color 0%, #4CE2FF 100%)
+		box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+		border-radius: 4px
+		border: none
+		font-size: 14px
+		text-align: center
+		text-transform: uppercase
+		color: #FFFFFF
+		+btn_hover
 
 .promo
-  min-height: 800px
-  background: url(../img/uber_bg.jpg) center (center / cover) no-repeat
-  padding: 175px 0 135px 0
+	min-height: 800px
+	background: url(../img/uber_bg.jpg) center (center / cover) no-repeat
+	padding: 175px 0 135px 0
 
-  .promo_header
-    font-weight: 900
-    font-size: 60px
-    text-transform: uppercase
-    color: #FFFFFF
-    line-height: 60px
-    margin: 0
-    text-align: center
+	&_header
+		font-weight: 900
+		font-size: 60px
+		text-transform: uppercase
+		color: #FFFFFF
+		line-height: 60px
+		margin: 0
+		text-align: center
 
-  .promo_subheader
-    font-weight: 900
-    font-size: 36px
-    text-transform: uppercase
-    color: #FFFFFF
-    line-height: 36px
-    margin: 0
-    margin-top: 22px
-    text-align: center
+	&_subheader
+		font-weight: 900
+		font-size: 36px
+		text-transform: uppercase
+		color: #FFFFFF
+		line-height: 36px
+		margin: 0
+		margin-top: 22px
+		text-align: center
 
-  .promo_descr
-    margin-top: 23px
-    font-size: 18px
-    line-height: 24px
-    text-align: center
-    color: #FFFFFF
+	&_descr
+		margin-top: 23px
+		font-size: 18px
+		line-height: 24px
+		text-align: center
+		color: #FFFFFF
 
-  .promo_btn
-    display: block
-    margin: 118px auto 0 auto
-    width: 259px
-    height: 63px
-    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
-    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
-    border-radius: 4px
-    border: none
-    font-size: 14px
-    text-align: center
-    text-transform: uppercase
-    color: #FFFFFF
+	&_btn
+		display: block
+		margin: 118px auto 0 auto
+		width: 259px
+		height: 63px
+		background: linear-gradient(0deg, $main-color 0%, #4CE2FF 100%)
+		box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+		border-radius: 4px
+		border: none
+		font-size: 14px
+		text-align: center
+		text-transform: uppercase
+		color: #FFFFFF
+		+btn_hover
 
 .reasons
   padding: 71px 0 65px 0
@@ -164,7 +174,6 @@ nav
 		color: #fff
 
 .reasons
-
   .reasons_item
     display: flex
     justify-content: center
@@ -178,7 +187,7 @@ nav
     margin-right: 26px
     width: 116px
     height: 116px
-    background: #1EACC7
+    background: $main-color
     border-radius: 50%
 
   .reasons_item .reasons_descr
@@ -186,7 +195,7 @@ nav
 
     .reasons_subtitle
       line-height: 21px
-      color: #1eacc7
+      color: $main-color
       font-size: 17px
       font-weight: 400
 
@@ -242,8 +251,26 @@ nav
 			border-radius: 50%
 			padding: 6px
 			cursor: pointer
-			img
-				width: 100%
+			&::before
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $main-color
+				transition: 0.4s all
+			&::after
+				content: ''
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				display: block
+				width: 2px
+				height: 14px
+				background-color: $main-color
+				transition: 0.4s all
+			&:hover
+				&::before, &::after
+					background-color: $second-color
 
 .choice
 	position: relative
@@ -269,3 +296,46 @@ nav
 		width: 100%
 		background-color: #070716
 		z-index: 1
+
+.require
+	padding: 68px 0 84px 0
+	&_block
+		margin: 33px 0
+		&_nmb
+			margin-bottom: 0
+	&_title
+		color: #1ca8c3
+		font-size: 22px
+		font-weight: 400
+	&_list
+		list-style-type: none
+		padding-left: 50px
+		margin-top: 22px
+		li
+			position: relative
+			font-size: 17px
+			font-weight: 300
+			line-height: 24px
+			margin-bottom: 10px
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				left: -32px
+				top: 2px
+				width: 21px
+				height: 20px
+				background: url('../icons/checkBlue.png') center (center / cover) no-repeat
+	&_descr
+		font-weight: 300
+		font-size: 17px
+		line-height: 24px
+		color: #1CA8C3
+	.warning
+		.require_title
+			color: $second-color
+		.require_list
+			li
+				&::before
+					background: url('../icons/checkRed.png') center (center / cover) no-repeat
+					
