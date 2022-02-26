@@ -9,30 +9,27 @@ const cleanCSS = require('gulp-clean-css');
 gulp.task('server', function() {
     browserSync.init({
         server: {
-            baseDir: "Uber/src"
+            baseDir: "pulse/src"
         }
     });
 });
 
 gulp.task('styles', function() {
-    return gulp.src("Uber/src/sass/*.+(scss|sass)")
+    return gulp.src("pulse/src/sass/*.+(scss|sass)")
             .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
             .pipe(rename({
                 prefix: "",
                 suffix: ".min",
               }))
-            .pipe(autoprefixer({
-                browsers: ['last 2 versions'],
-                cascade: false
-            }))
+            .pipe(autoprefixer())
             .pipe(cleanCSS({compatibility: 'ie8'}))
-            .pipe(gulp.dest("Uber/src/css"))
+            .pipe(gulp.dest("pulse/src/css"))
             .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function() {
-    gulp.watch("Uber/src/sass/*.+(scss|sass)", gulp.parallel("styles"));
-    gulp.watch("Uber/src/*.html").on("change", browserSync.reload);
+    gulp.watch("pulse/src/sass/*.+(scss|sass)", gulp.parallel("styles"));
+    gulp.watch("pulse/src/*.html").on("change", browserSync.reload);
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
