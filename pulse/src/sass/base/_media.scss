@@ -4,6 +4,11 @@
             align-items: center;
         }
     }
+    .carousel {
+        img {
+            width: 85%;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -33,6 +38,11 @@
         }
         .feed-form {
             margin: 0 auto;
+        }
+    }
+    .carousel {
+        button {
+            display: none;
         }
     }
 }

@@ -24,8 +24,9 @@ const slider = tns({
     controls: false,
     nav: false,
     responsive: {
-        1100: {
-            autoWidth: true
+        991: {
+            autoplay: false,
+            nav: false
         }
       }
   });
