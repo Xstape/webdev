@@ -96,4 +96,13 @@
             align-items: center;
         }
     }
+    .footer {
+        &__info {
+            width: 100%;
+        }
+    }
+    .modal {
+        padding: 38px 10px;
+        border-radius: 10px;
+    }
 }
