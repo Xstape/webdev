@@ -58,6 +58,11 @@
         flex-direction: column;
         height: 200px;
     }
+    .feed {
+        &__item {
+            gap: 30px;
+        }
+    }
 }
 
 @media (max-width: 440px) {
@@ -83,6 +88,12 @@
             font-size: 12px;
             font-weight: 300;
             line-height: 45px;
+        }
+    }
+    .feed {
+        &__item {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
