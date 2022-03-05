@@ -41,6 +41,12 @@
         }
     }
     .carousel {
+        &__inner {
+            width: 100%;
+        }
+        .slick-track {
+            width: 100%;
+        }
         button {
             display: none;
         }
@@ -70,6 +76,13 @@
         }
         .feed-form {
             width: 90%;
+        }
+    }
+    .catalog {
+        &__tab {
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 45px;
         }
     }
 }

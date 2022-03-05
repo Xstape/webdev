@@ -38,8 +38,9 @@
     &__content {
         margin-top: 60px;
         display: none;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
+        gap: 2%;
         &_active {
             display: flex;
         }
