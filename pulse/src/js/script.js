@@ -47,7 +47,32 @@ $(document).ready(function(){
             $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
             $('.overlay, #order').fadeIn('slow');
         });
-    })
+    });
+
+    function valideForm(form) {
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожалйуста, введите свое имя",
+                phone: "Пожалйуста, введите номер телефона",
+                email: {
+                    required: "Пожалуйста, введите свою почту",
+                    email: "Неправильно введен адрес почты"
+                }
+            }
+        });
+    };
+
+    valideForm('#consultation-form');
+    valideForm('#consultation form');
+    valideForm('#order form');
 });
 
 // const slider = tns({
