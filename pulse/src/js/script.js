@@ -75,6 +75,27 @@ $(document).ready(function(){
     valideForm('#order form');
 
     $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    $('form').submit(function(e) {
+        e.preventDefault();             // отменяет стандартное поведение страницы (т.е. перезагрузку страницы)
+
+        // if (!$(this).valid()) {         // Проверка валидации (чтобы не отправлять пустые формы)
+        //     return;
+        // };
+
+        $.ajax({
+            type: "POST",                           // что делаем? - Отправляем данные
+            url: "mailer/smart.php",                // Куда?
+            data: $(this).serialize()               // Что отправляем? serialize() переформирует данные для сервера
+        }).done(function() {                        // Когда подтвердится успешное выполнение отправки формы
+            $(this).find("input").val("");          // очищаем форму, помещая пустое значение в инпуты
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');             // В конце формы должны перезагрузиться/очиститься
+            return false;
+        });
+    });
 });
 
 // const slider = tns({
